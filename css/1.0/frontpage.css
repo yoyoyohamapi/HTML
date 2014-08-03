@@ -1,0 +1,166 @@
+html{
+	height: 100%;
+}
+
+body{
+	height: 100%;
+}
+
+
+.fullHeight{
+	height:100%;
+}
+
+.navbar.navbar-default.custom{
+	margin-bottom: 0px;
+	background-color: #ffae9a;
+	border: none;
+	border-radius: 0px;
+
+}
+
+.bigRect{
+	padding-left:0px;
+	padding-right:0px;
+	position: relative;
+	display:block;
+}
+
+.bigRect  img{
+	max-height: 100%;
+	max-width:100%;
+}
+
+#logoRect{
+	padding-top: 5%;
+	padding-bottom:5%;
+}
+
+#logoRect .introduce{
+	color:rgba(14, 58, 78, 1);
+	padding-top: 5%;
+	font-size: 12px;
+	font-size: 1.2em;
+}
+
+#courseRect{
+
+
+}
+
+#courseRect img{
+	min-width:100%;
+	height: auto;
+}
+
+#courseRect .col-md-3{
+	padding: 0px;
+	min-height: 100%;
+}
+
+#courseTitleRect .row{
+	text-align: center;
+}
+
+#courseTitleRect img{
+	width:20%;
+	margin-left: 1.5%;
+}
+
+#topicRect {
+	min-height: 55%;
+}
+
+#topicRect img{
+	width:45%;
+}
+
+
+.topicList{
+	font-size: 3rem;
+	padding-left: 15%;
+}
+
+#regRect{
+	padding:15%;
+}
+
+#regRect p{
+	font-size: 10rem;
+	font-weight: 10;
+	text-align: center;
+	color:rgba(93, 93, 20, 1);
+	transition: color 1s;
+	-moz-transition: color 1s;	/* Firefox 4 */
+	-webkit-transition: color 1s;	/* Safari 和 Chrome */
+	-o-transition: color 1s;	/* Opera */
+}
+
+
+#regRect p:hover{
+	color:rgba(71, 82, 162, 1);
+	cursor:pointer;
+}
+
+#aboutRect{
+	padding:5%;
+	color:white;
+}
+
+.logReg{
+	float: right;
+	display: none
+}
+
+.panel.panel-default.custom{
+	border-radius: 0px;
+}
+
+.panel.panel-default.custom .panel-heading{
+	font-size: 2rem;
+	background-color: #BC544B;
+	color:white;
+}
+
+.panel.panel-default.custom .panel-body .col-md-10.col-md-offset-1{
+	padding:10px;
+}
+
+.panel.panel-default.custom form input{
+	width: 100%;
+	font-size: 2.5rem;
+	border-radius: 0;
+	border:1px solid #ccc;
+
+}
+
+.hide{
+	display:none;
+}
+
+@media  screen and (max-width: 800px) {
+	html{
+		
+		font-size: 35.5%;
+	}
+	body{
+		font-size: 14px;
+		font-size: 1.4em;
+		height:100%;
+	}
+	nav{
+		display: none;
+	}
+	#topicRect {
+		min-height: 0;
+	}
+	#topicRect img{
+		width:65%;
+	}
+	#regRect{
+		padding:25%;
+	}
+	#regRect p{
+		font-size: 5rem;
+	}
+}

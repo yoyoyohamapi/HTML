@@ -1,0 +1,44 @@
+$(function(){
+	// 头像拉出菜单
+	$('.headPic').click(function(){
+		if($('.search').is(":visible")==true){
+			$('.search').fadeOut('fast',function(){
+				$('.headPic').fadeToggle('fast',function(){
+					$('#settingsMenu').fadeToggle('fast',function(){
+						$('.headPic').fadeToggle();
+					});
+				});
+			});
+		}else{
+			$('.headPic').fadeToggle('fast',function(){
+				$('#settingsMenu').fadeToggle('fast',function(){
+					$('.headPic').fadeToggle('fast',function(){
+						$('.search').fadeIn('fast');
+					});
+				});
+			});
+		}
+		
+	});
+
+	//拉出搜索框
+	$('.search').click(function(){
+		if($('.headPic').is(':visible')==true){
+			$('.search').fadeToggle('fast',function(){
+				$('.headPic').fadeOut('fast',function(){
+					$('.search').fadeToggle('fast',function(){
+						$('#search_content').fadeToggle();
+					});
+				});
+			});
+		}else{
+			$('#search_content').fadeToggle('fast',function(){
+				$('.search').fadeToggle('fast',function(){
+					$('.headPic').fadeIn('fast',function(){
+						$('.search').fadeToggle();
+					});
+				});
+			});
+		}
+	});
+});

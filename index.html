@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="css/1.0/frontpage.css" rel="stylesheet" type="text/css">
+<link href="css/buttons.css" rel="stylesheet" type="text/css">
+
+<!-- JS文件 -->
+<script src="jquery-1.11.1.min.js"></script>
+
+<!-- 自定义JS文件 -->
+<script src="showCourse.js"></script>
+<script src="detectScroll.js"></script>
+
+<title>XX教育</title>
+</head>
+<body>
+<script type="text/javascript">
+var iden=null;//lcx-debug
+
+$(function(){
+	$("#regRect p").click(function(){
+		$(this).css('color','rgba(71, 82, 162, 1)');
+		$(this).animate({
+			marginLeft:'-50%',
+		},"slow",function(){
+		$(this).parent().attr('class','col-md-5');
+
+			$('.logReg').fadeIn(1000);
+		});
+		
+	});
+	//滚动到对应DIV
+	$("#toReg").click(function(){
+		$("html,body").animate({
+			scrollTop:$("#regRect").offset().top
+		},1500,function(){
+			$("#regRect p").trigger('click');
+		});
+	});
+});
+	
+</script>
+	<!-- navbar -->
+	<nav class="navbar navbar-default custom" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				 <a class="navbar-brand" href="#">ESchool</a>
+			</div>
+			<div class="collapse navbar-collapse" >
+				<ul class="nav navbar-nav navbar-right">
+					<li id="toLogin"><a href="Javascript:void(0);">登陆</a></li>
+					<li id="toReg"><a href="Javascript:void(0);">注册</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid fullHeight">
+		<!-- logo区域 -->
+		<div id="logoRect"class="row bigRect" style="background-color:#ff8264;min-height:70%">
+			<div class="col-md-4 col-xs-12 col-md-offset-1 introduce">
+				<h1 style="font-size:5rem">Education!</h1>
+				<p style="font-size:3rem">大型开放式网络课程（massive open online courses，简称MOOC）2012年以来日益受到瞩目。人们为此将2012年称为大型开放式网络课程元年。</p>
+			</div>
+			<div style="text-align:center;"class="col-md-4 col-xs-12 col-md-offset-1">
+				<img id=""src="img/frontpage/about.gif">
+			</div>
+		</div>
+		<!-- 四个课程预览 -->
+		<div id="courseRect" class="row bigRect " style="background-color:black;">
+			<div class="col-md-3 col-xs-12">
+				<img id=""src="img/frontpage/preview2.gif">
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<img id=""src="img/frontpage/preview.gif">
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<img id=""src="img/frontpage/preview2.gif">
+			</div>
+			<div class="clearfix visible-xs-block"></div>
+			<div class="col-md-3 col-xs-12">
+				<img id=""src="img/frontpage/preview.gif">
+			</div>
+		</div>
+		<!-- 六边形课程展示 -->
+		<div style="background-color: rgb(255, 174, 154); padding:20%;" id="courseTitleRect" class="row bigRect">
+			    <div class="row">
+						<img id="imgOne"  src=" img/frontpage/title1.gif" style="top: 10%; left: 31%;opacity:0">
+						<img id="imgTwo" src=" img/frontpage/六边形2.gif" style="top: 10%; left: 42%;opacity:0">
+						<img id="imgThree" src=" img/frontpage/六边形3.gif " style="top: 10%; left: 53%;opacity:0">
+			    </div>
+			    <div class="row">
+			        <img id="imgFour" src=" img/frontpage/六边形4背面.gif" style="top: 47%; left: 25.5%;opacity:0">
+						<img id="imgFive" src=" img/frontpage/六边形5.gif" style="top: 47%; left: 37%;opacity:0">
+						<img id="imgSix" src=" img/frontpage/六边形6.gif" style="left: 48%; top: 47%;opacity:0">
+						<img id="imgSeven" src=" img/frontpage/六边形7.gif" style="left: 59%; top: 47%;opacity:0">	
+			    </div>
+    		</div>
+		<!-- 话题更新 -->
+		<div id="topicRect" class="row bigRect" style="background-color:#f3dbc4;padding-top:5%;padding-bottom:5%;">
+			<div  class="col-md-3 col-xs-3 " style="position: absolute; bottom: 5%;">
+				<img id=""src="img/frontpage/话题图标.gif">
+			</div>
+			<div class="col-md-9 col-xs-9" style="margin-left:15%">
+				<ul class="topicList" >
+					<li>什么是病毒式营销?</li>
+					<li>响应式设计在移动互联网时代的地位?</li>
+					<li>You Know What is Python?</li>
+					<li>分分钟教你熟悉MVC?</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 学员网 -->
+		<div id="stusRect" class="row bigRect" style="background-color:#bc544b;">
+			<div style="text-align:center;height:100%">
+				<img id=""src="img/frontpage/笑脸网.gif">
+			</div>
+		</div>
+		<!-- 注册！ -->
+		<div id="regRect" class="row bigRect" style="background-color:#f0e0ac;min-height:30%">
+			<div class="col-md-12">
+				<p style="">Join us！</p>
+			</div>
+			<!-- 登陆及注册框 -->
+			<div class="col-md-5 logReg">
+				<div class="panel panel-default custom">
+					<div class="panel-heading">欢迎注册</div>
+					<div class="panel-body">
+						<form>
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1">
+									<input type="text" placeholder="邮箱">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1">
+									<input type="text" placeholder="密码">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="panel-footer">
+					<button class="button button-flat-primary">注册</button>
+					<button class="button button-flat-action"><i class="fa fa-arrow-circle-o-right "></i>转到登陆</button>
+					</div>
+				</div>
+				
+			</div>
+			<!-- <div class="col-md-3 logReg">
+				<form>
+					<input type="text">
+				</form>
+			</div> -->
+		</div>
+		<!-- 关于本站 -->
+		<div id="aboutRect" class="row bigRect" style="background-color:#3b434d;height:38%">
+			<div class="col-md-8 col-md-offset-2 col-xs-12">
+				<div class="col-md-3 col-xs-3">
+					Logo
+				</div>
+				<div class="col-md-3 col-xs-3">
+					关于我们
+				</div>
+				<div class="col-md-3 col-xs-3">
+					帮助
+				</div>
+				<div class="col-md-3 col-xs-3">
+					产品及服务
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
