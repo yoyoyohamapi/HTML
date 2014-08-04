@@ -6,6 +6,47 @@ body{
 	height: 100%;
 }
 
+#toLogin:hover{
+	cursor: pointer;
+}
+
+.regLog{
+	display: none;
+	width: 100%;
+	font-size:2rem;
+	margin-top: 5%;
+	padding:5%;
+	background-color:rgba(233, 128, 103, 1);
+	color:rgba(14, 58, 78, 1);;
+}
+
+.regLog input{
+	width: 80%;
+	font-size: 2.5rem;
+	border-radius: 5px;
+	border:1px solid #ccc;
+	margin-top: 25px;
+	padding:2px;
+}
+
+#register{
+	width:80%;
+	margin-top: 25px;
+	background-color:#5691AF;
+	border-radius:5px;
+	border-bottom: 5px solid rgba(52, 92, 152, 1);
+	font-size: 2rem;
+	height:40px;
+	transition: background 1s;
+	-moz-transition: background 1s;	/* Firefox 4 */
+	-webkit-transition: background 1s;	/* Safari 和 Chrome */
+	-o-transition: background 1s;	/* Opera */
+
+}
+
+#register:hover{
+	background-color: rgba(107, 182, 221, 1);
+}
 
 .fullHeight{
 	height:100%;
@@ -43,10 +84,8 @@ body{
 	font-size: 1.2em;
 }
 
-#courseRect{
 
 
-}
 
 #courseRect img{
 	min-width:100%;
@@ -58,13 +97,26 @@ body{
 	min-height: 100%;
 }
 
+#courseTitleRect{
+	background-color: rgb(255, 174, 154);
+	padding: 10%;
+	background-repeat: no-repeat;
+	background-size: 0;
+	background-position: 7.1% 92.5%;
+	transition: background 0.5s;
+	-moz-transition: background 0.5s;	/* Firefox 4 */
+	-webkit-transition: background 0.5s;	/* Safari 和 Chrome */
+	-o-transition: background 0.5s;	/* Opera */
+}
+
+
 #courseTitleRect .row{
 	text-align: center;
 }
 
 #courseTitleRect img{
-	width:20%;
-	margin-left: 1.5%;
+	width:24%;
+	opacity: 0;
 }
 
 #topicRect {
@@ -82,7 +134,9 @@ body{
 }
 
 #regRect{
-	padding:15%;
+	/*padding-top:10%;*/
+	height: 60%;
+	background-color:#f0e0ac;
 }
 
 #regRect p{
@@ -108,7 +162,6 @@ body{
 }
 
 .logReg{
-	float: right;
 	display: none
 }
 
@@ -158,9 +211,9 @@ body{
 		width:65%;
 	}
 	#regRect{
-		padding:25%;
+		/*padding-top:10%;*/
 	}
 	#regRect p{
-		font-size: 5rem;
+		font-size: 18rem;
 	}
 }

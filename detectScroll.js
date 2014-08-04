@@ -13,13 +13,15 @@ $(window).scroll(function(){
 	}
 });
 
-//debug tool funciton
-/*
 $(window).resize(function(){
 	//process here
-	print($(window).width()+"*"+$(window).height()+";"+$("#logoRect").height()+";"+$("#courseRect").height());
+	//print($("#regRect").height());
+	$("#regRect").css("padding-top",$("#regRect").height()*2/5+"px");
 });
 
+//debug tool funciton
+
+/*
 function print(info){
 	$("title").text(info)
 }

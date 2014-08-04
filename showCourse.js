@@ -50,7 +50,9 @@ function showSexangleCourse(){
 						},"slow",function(){
 							$("#imgSeven").animate({
 								opacity:1
-							},"slow");
+							},"normal",function(){
+								$("#courseTitleRect").css("background-size","91.7% auto");
+							});
 						})
 					})
 				})
