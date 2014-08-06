@@ -3,8 +3,13 @@ html{
 }
 
 body{
-	height: 100%;
+	min-height: 100%;
 	background-color:#374550;
+}
+
+.container-fluid.mainCon{
+	height:75%;
+	padding:50px;
 }
 
 .navbar.navbar-default.nav-custom{
