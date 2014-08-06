@@ -30,27 +30,30 @@ $(function(){
 
 //六边形课程显示
 function showSexangleCourse(){
+
+	var speed=200; // anime speed
+	
 	$("#imgOne").animate({
 		opacity:1
-	},"slow",function(){
+	},speed,function(){
 		$("#imgTwo").animate({
 			opacity:1
-		},"slow",function(){
+		},speed,function(){
 			$("#imgThree").animate({
 				opacity:1
-			},"slow",function(){
+			},speed,function(){
 				$("#imgFour").animate({
 					opacity:1
-				},"slow",function(){
+				},speed,function(){
 					$("#imgFive").animate({
 						opacity:1
-					},"slow",function(){
+					},speed,function(){
 						$("#imgSix").animate({
 							opacity:1
-						},"slow",function(){
+						},speed,function(){
 							$("#imgSeven").animate({
 								opacity:1
-							},"normal",function(){
+							},speed,function(){
 								$("#courseTitleRect").css("background-size","91.7% auto");
 							});
 						})

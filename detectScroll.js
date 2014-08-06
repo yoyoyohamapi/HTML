@@ -23,7 +23,7 @@ $(window).resize(function(){
 
 /*
 function print(info){
-	$("title").text(info)
+	$("title").text(info);
 }
 
 $(function(){

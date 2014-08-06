@@ -29,7 +29,7 @@ body{
 	padding:2px;
 }
 
-#register{
+#doAction{
 	width:80%;
 	margin-top: 25px;
 	background-color:#5691AF;
@@ -44,7 +44,7 @@ body{
 
 }
 
-#register:hover{
+#doAction:hover{
 	background-color: rgba(107, 182, 221, 1);
 }
 
