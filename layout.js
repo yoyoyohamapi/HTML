@@ -17,11 +17,15 @@ $(function(){
 	mozilla: /mozilla/.test( userAgent ) && !/(compatible|webkit)/.test( userAgent ) 
 
 	}; 
-
+	//火狐以及IE需要重构滚动条
 	if($(".conPanelCon").length>0 && ($.browser.mozilla || $.browser.msie)){
 		$(".conPanelCon").mCustomScrollbar();
 	}
-
+	//左侧导航贴边自适应
+	warpLoc();
+	$(window).resize(function(){
+		warpLoc();
+	});
 	// 头像拉出菜单
 	$('.headPic').click(function(){
 		if($('#search_content').width()!=0)
@@ -77,4 +81,11 @@ $(function(){
 		var ratioStr = ratio*100+"%";
 		$(".conPanelNav li").css("width",ratioStr);
 	}
+
+	
 });
+
+function warpLoc(){
+	top_css =parseInt($(".barItem.active").offset().top) - parseInt($(".leftBar ul").offset().top)+parseInt($(".leftBar .barItem").css("margin-top").replace('px',''))-10
+	$(".imgWrap").css("top",top_css);
+}

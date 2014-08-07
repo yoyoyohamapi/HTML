@@ -142,6 +142,64 @@ body{
     color:    #6c757a;
 }
 
+
+.leftBar{
+	background-color: #1e252d;
+	margin-left: 30px;
+	padding-left: 0;
+	padding-right:0;
+	padding-bottom: 30px;
+	position: relative;
+	box-shadow: 5px 5px 0px;
+	height: 630px;
+}
+
+
+
+.leftBar ul{
+	list-style: none;
+	padding: 0;
+}
+
+.leftBar .barItem{
+	padding:10px;
+	text-align: center;
+	margin-top: 35px;
+	height: 50px;
+
+}
+
+.leftBar .barItem a{
+	color:white;
+	font-size:2.2rem;
+}
+
+.leftBar .barItem a:hover{
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 2.5rem;
+
+
+}
+
+.leftBar .barItem.active{
+	background-color: #fc7a58;
+}
+
+.imgWrap{
+	position: absolute;
+	height: 60px;
+}
+
+.leftWrap{
+
+	left: 34px;
+}
+
+.rightWrap{
+	right: -28px;	
+}
+
 .conPanel{
 	background-color: #c9c2b2;
 	height: 630px;
@@ -188,8 +246,8 @@ body{
 
 .conPanelCon{
 	width: 100%;
-	max-height: 530px;
-	padding-top: 20px;
+	height: 500px;
+	padding-top: 1%;
 	float:left;
 	overflow-y:auto;
  	overflow-x: hidden;
@@ -212,13 +270,17 @@ body{
     background: rgba(255,0,0,0.4);
 }
 
+.conPanelCon .col-md-4 {
+	height: 500px;
+}
+
 .conPanelCon.course p{
 	text-align: center;
 }
 
 
 .conPanelCon.course .courseImg{
-	margin-top: 20%;
+	margin-top: 10%;
 }
 
 .conPanelCon.course .courseImg:hover{
@@ -234,7 +296,7 @@ body{
 .conPanelCon.course .courseName{
 	font-size: 2rem;
 	font-weight: 700;
-	margin-top: 10%;
+	margin-top: 5%;
 }
 
 .conPanelCon.course .courseGoOn a{
@@ -260,4 +322,30 @@ body{
 	-moz-transition-duration: 0.3s;
 	-o-transition-duration: 0.3s;
 	transition-duration: 0.3s;
+}
+
+
+
+@media  screen and (max-width: 1366px) {
+	.leftBar{
+		
+		height:560px;
+	}
+
+	.leftBar .barItem{
+		margin-top: 25px;
+	}
+
+	.conPanel{
+		height: 560px;
+	}
+
+	.conPanelCon{
+		height: 450px;
+		padding-top: 5%;
+	}
+
+	.conPanelCon .col-md-4 {
+		height: 400px;
+	}
 }
