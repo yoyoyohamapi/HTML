@@ -35,13 +35,14 @@
 
 .leftWrap{
 	position: absolute;
-	left: 55px;
-	top: 145px;
 	height: 60px;
+	left: 34px;
+	top: 25px;
 }
 
 .rightWrap{
 	position: absolute;
-	top: 145px;
+	top: 25px;
 	height: 60px;
+	right: -28px;	
 }

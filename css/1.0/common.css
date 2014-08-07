@@ -8,7 +8,7 @@ body{
 }
 
 .container-fluid.mainCon{
-	padding:50px;
+	padding:2%;
 }
 
 .navbar.navbar-default.nav-custom{
@@ -193,7 +193,23 @@ body{
 	float:left;
 	overflow-y:auto;
  	overflow-x: hidden;
+}
 
+/* 设置滚动条的样式 */
+.conPanelCon::-webkit-scrollbar {
+    width: 12px;
+}
+/* 滚动槽 */
+.conPanelCon::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+/* 滚动条滑块 */
+.conPanelCon::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0,0,0,0.1);
+}
+.conPanelCon::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255,0,0,0.4);
 }
 
 .conPanelCon.course p{
@@ -233,4 +249,15 @@ body{
 
 .conPanelCon.course .courseGoOn a.button.button-flat-highlight{
 	border-radius:5px;
+	background: #bf5d44;
+	color:#e0d9c8;
+}
+
+.conPanelCon.course .courseGoOn a.button.button-flat-highlight:hover{
+	background:  #e2765a;
+	transition-property: background;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
 }
