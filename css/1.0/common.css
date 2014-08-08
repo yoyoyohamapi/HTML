@@ -246,32 +246,14 @@ body{
 
 .conPanelCon{
 	width: 100%;
-	height: 500px;
 	padding-top: 1%;
 	float:left;
-	overflow-y:auto;
- 	overflow-x: hidden;
 }
 
-/* 设置滚动条的样式 */
-.conPanelCon::-webkit-scrollbar {
-    width: 12px;
-}
-/* 滚动槽 */
-.conPanelCon::-webkit-scrollbar-track {
-    border-radius: 10px;
-}
-/* 滚动条滑块 */
-.conPanelCon::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: rgba(0,0,0,0.1);
-}
-.conPanelCon::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(255,0,0,0.4);
-}
+
 
 .conPanelCon .col-md-4 {
-	height: 500px;
+	/*height: 500px;*/
 }
 
 .conPanelCon.course p{
@@ -313,10 +295,6 @@ body{
 	border-radius:5px;
 	background: #bf5d44;
 	color:#e0d9c8;
-}
-
-.conPanelCon.course .courseGoOn a.button.button-flat-highlight:hover{
-	background:  #e2765a;
 	transition-property: background;
 	-webkit-transition-duration: 0.3s;
 	-moz-transition-duration: 0.3s;
@@ -324,12 +302,147 @@ body{
 	transition-duration: 0.3s;
 }
 
+.conPanelCon.course .courseGoOn a.button.button-flat-highlight:hover{
+	background:  #e2765a;
+	
+}
 
+#addCourse{
+	width: 4rem;
+	height:4rem;
+	background: rgba(255, 255, 255, 0.73);
+	color:#ccc;
+	text-align: center;
+	font-size: 3.5rem;
+	border-radius: 50%;
+	position: absolute;
+	right: 10px;
+	border-bottom: 3px solid rgb(124,124,124);
+	border-right: 3px solid rgb(124,124,124);
+	transition-property: background;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+
+#addCourse:hover{
+	cursor: pointer;
+	background:  rgba(255, 255, 255, 1);
+}
+
+#addCourse:active{
+	border: 2px solid #c9c2b2;
+
+}
+
+.conPanelCon .liveCourse{
+	width: 95%;
+	list-style: none;
+}
+
+.pin{
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+	top: 3px;
+	left: 3px;
+	border-radius: 50%;
+	background: #c9c2b2;
+	border: 1px solid rgb(151, 151, 151);
+}
+
+.conPanelCon .liveCourse li {
+	width:95%;
+	padding:1%;
+	margin-top: 2%;
+	padding: 1%;
+	margin-top: 2%;
+	background-color: antiquewhite;
+	border: 1px solid rgb(151, 151, 151);
+	border-radius:10px;
+	box-shadow: 2px 2px 0px #8A8A8A;
+	position: relative;
+	transition-property: width;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+
+.conPanelCon .liveCourse li:hover{
+	width:100%;
+	
+}
+
+.conPanelCon .liveCourse li span{
+	float:left;
+}
+
+.conPanelCon .liveCourse li span:nth-child(2n+1){
+	width:25%;
+}
+
+.conPanelCon .liveCourse li span:nth-child(2n){
+	width:50%;
+}
+.conPanelCon .liveCourse li span:nth-child(1){
+	text-align: center;
+}
+
+.conPanelCon .liveCourse li span:nth-child(3){
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+	font-size: 2rem;	
+}
+
+.conPanelCon .liveCourse li .time{
+	font-size: 1.8rem;
+	color:#bf5d44;
+	font-weight: 200;
+}
+
+
+
+.conPanelFooter{
+	position: absolute;
+	height: 50px;
+	width: 98%;
+	left: 1%;
+	right: 1%;
+	bottom: 0px;
+	border-top:1px dashed white;
+}
+
+.conPanelFooter a{
+	position: absolute;
+	font-size: 3rem;
+	color: #bf5d44;
+	transition-property: color;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+
+.conPanelFooter a:hover{
+	cursor: pointer;
+	color:#e2765a;
+}
+
+#lastPage{
+	left: 0px;
+}
+
+#nextPage{
+	right:0px;
+}
 
 @media  screen and (max-width: 1366px) {
 	.leftBar{
 		
-		height:560px;
+		height:550px;
 	}
 
 	.leftBar .barItem{
@@ -337,15 +450,7 @@ body{
 	}
 
 	.conPanel{
-		height: 560px;
+		height: 550px;
 	}
 
-	.conPanelCon{
-		height: 450px;
-		padding-top: 5%;
-	}
-
-	.conPanelCon .col-md-4 {
-		height: 400px;
-	}
 }

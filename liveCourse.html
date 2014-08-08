@@ -11,7 +11,7 @@
 <script src="jquery.mCustomScrollbar.concat.min.js"></script>
 <!-- 自定义JS -->
 <script src="layout.js"></script>
-<title>我的课程</title>
+<title>我的直播课表</title>
 </head>
 
 <body>
@@ -55,10 +55,10 @@
 			<img src="img/leftwrap.png" class="imgWrap leftWrap">
 			<div class="col-md-12 leftBar">
 				<ul>
-					<li class=" barItem  active">
+					<li class=" barItem">
 						<a>我的课程</a>
 					</li>
-					<li class=" barItem">
+					<li class=" barItem  active">
 						<a>我的直播课表</a>
 					</li>
 					<li class=" barItem">
@@ -83,34 +83,31 @@
 		<div class="col-md-9"  style="padding-right:3%;">
 		<!-- Content -->
 			<div class="col-md-12 conPanel">
-				<div class="conPanelNav">
-					<ul class="clearfix">
-						<li><a  class="active">学 习 中</a></li>
-						<li><a>已 学 完</a></li>
-						<li><a>收 藏</a></li>
+				<div class="conPanelCon clearfix">
+					<ul class="liveCourse">
+						<li class="clearfix">
+							<span><img src="img/LiveIcon.png"></span>
+							<span><h1>编程算法基础</h1><p class="time">9月5日 9:00~10:00</p></span>
+							<span>第一课时</span>
+							<i class="pin"></i>
+
+						</li>
+						<li class="clearfix">
+							<span><img src="img/LiveIcon.png"></span>
+							<span><h1>编程算法基础</h1><p class="time">9月5日 9:00~10:00</p></span>
+							<span>第一课时</span>
+							<i class="pin"></i>
+
+						</li>
+						<li class="clearfix">
+							<span><img src="img/LiveIcon.png"></span>
+							<span><h1>编程算法基础</h1><p class="time">9月5日 9:00~10:00</p></span>
+							<span>第一课时</span>
+							<i class="pin"></i>
+							
+						</li>
 					</ul>
 				</div>
-				<div class="conPanelCon clearfix course">
-					<div class="col-md-4 couseItem" >
-						<p class="courseImg"><a><img src="img/HTML5课程图标.png"></a></p>
-						<p class="courseName">Html5开发技术</p>
-						<p class="courseGoOn"><a class="button button-flat-highlight">继续学习</a></p>
-					</div>
-					<div class="col-md-4 couseItem">
-						<p class="courseImg"><a><img src="img/java课程图标.png"></a></p>
-						<p class="courseName">Java专业课</p>
-						<p class="courseGoOn"><a class="button button-flat-highlight">继续学习</a></p>
-					</div>
-					
-					<div class="col-md-4 couseItem">
-						<p class="courseImg"><a><img src="img/java课程图标.png"></a></p>
-						<p class="courseName">Java专业课</p>
-						<p class="courseGoOn"><a class="button button-flat-highlight">继续学习</a></p>
-					</div>
-					<!-- 添加课程按钮 -->
-					<a id="addCourse" ><i class="fa fa-plus"></i></a>
-				</div>
-
 				<div class="conPanelFooter">
 					<a id="lastPage"><i class="fa fa-chevron-circle-left "></i></a>
 					<a id="nextPage"><i class="fa fa-chevron-circle-right "></i></a>

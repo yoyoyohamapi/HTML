@@ -17,10 +17,10 @@ $(function(){
 	mozilla: /mozilla/.test( userAgent ) && !/(compatible|webkit)/.test( userAgent ) 
 
 	}; 
-	//火狐以及IE需要重构滚动条
-	if($(".conPanelCon").length>0 && ($.browser.mozilla || $.browser.msie)){
-		$(".conPanelCon").mCustomScrollbar();
-	}
+	// //火狐以及IE需要重构滚动条
+	// if($(".conPanelCon").length>0 && ($.browser.mozilla || $.browser.msie)){
+	// 	$(".conPanelCon").mCustomScrollbar();
+	// }
 	//左侧导航贴边自适应
 	warpLoc();
 	$(window).resize(function(){
