@@ -336,7 +336,7 @@ body{
 
 }
 
-.conPanelCon .liveCourse{
+.conPanelCon .itemList{
 	width: 95%;
 	list-style: none;
 }
@@ -352,7 +352,7 @@ body{
 	border: 1px solid rgb(151, 151, 151);
 }
 
-.conPanelCon .liveCourse li {
+.conPanelCon .itemList li {
 	width:95%;
 	padding:1%;
 	margin-top: 2%;
@@ -364,40 +364,41 @@ body{
 	box-shadow: 2px 2px 0px #8A8A8A;
 	position: relative;
 	transition-property: width;
-	-webkit-transition-duration: 0.5s;
-	-moz-transition-duration: 0.5s;
-	-o-transition-duration: 0.5s;
-	transition-duration: 0.5s;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
 }
 
-.conPanelCon .liveCourse li:hover{
+.conPanelCon .itemList li:hover{
 	width:100%;
+	cursor:pointer;
 	
 }
 
-.conPanelCon .liveCourse li span{
+.conPanelCon .itemList li span{
 	float:left;
 }
 
-.conPanelCon .liveCourse li span:nth-child(2n+1){
+.conPanelCon .itemList li span:nth-child(2n+1){
 	width:25%;
 }
 
-.conPanelCon .liveCourse li span:nth-child(2n){
+.conPanelCon .itemList li span:nth-child(2n){
 	width:50%;
 }
-.conPanelCon .liveCourse li span:nth-child(1){
+.conPanelCon .itemList li span:nth-child(1){
 	text-align: center;
 }
 
-.conPanelCon .liveCourse li span:nth-child(3){
+.conPanelCon .itemList li span:nth-child(3){
 	position: absolute;
 	bottom: 10px;
 	text-align: center;
 	font-size: 2rem;	
 }
 
-.conPanelCon .liveCourse li .time{
+.conPanelCon .itemList li .time{
 	font-size: 1.8rem;
 	color:#bf5d44;
 	font-weight: 200;
