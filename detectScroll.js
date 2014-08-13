@@ -5,18 +5,19 @@
 
 $(window).scroll(function(){
 	//alert(opt.max);
-	var adjust=$(window).width()*0.6;
-	var max = adjust+$("#logoRect").height()+$("#courseRect").height();
+	var adjust=$(window).width()*0.3;
+	var max = adjust+102+520+220+$("#courseRect").height();
 	if(($(window).height()+$(window).scrollTop()) >= max){
 		//print(max+"done");
     	showSexangleCourse(); // showCourse.js
+		//print("done");
 	}
 });
 
 $(window).resize(function(){
 	//process here
 	//print($("#regRect").height());
-	$("#regRect").css("padding-top",$("#regRect").height()*2/5+"px");
+	//$("#regRect").css("padding-top",$("#regRect").height()*2/5+"px");
 });
 
 //debug tool funciton
@@ -28,6 +29,6 @@ function print(info){
 
 $(function(){
 	//alert($(window).height());
-	print($(window).width()+"*"+$(window).height()+";"+$("#logoRect").height()+";"+$("#courseRect").height());
+	print($(window).width()+"*"+$(window).height()+";"+$("#introRect").height()+";"+$("#guideRect").height());
 });
 */
