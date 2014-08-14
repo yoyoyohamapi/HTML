@@ -32,3 +32,4 @@ $(function(){
 	print($(window).width()+"*"+$(window).height()+";"+$("#introRect").height()+";"+$("#guideRect").height());
 });
 */
+console.log("\n\n_(:з」∠)_\n\n复兴教育招聘 xxxxxxxxxxxxxx\n\n联系xxxxxxxx@xxxxxx.com 来自console\n\n");

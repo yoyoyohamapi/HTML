@@ -9,9 +9,11 @@
 
 <!-- JS文件 -->
 <script src="jquery-1.11.1.min.js"></script>
+<script src="./bootstrap/js/bootstrap.js"></script>
 
 <!-- 自定义JS文件 -->
 <script src="showCourse.js"></script>
+<script src="showCourseContent.js"></script>
 <script src="detectScroll.js"></script>
 <script src="formPanel.js"></script>
 
@@ -23,24 +25,6 @@ var iden=null;//lcx-debug
 $(function(){
 	//************************init
 	//$("#regRect").css("padding-top",$("#regRect").height()*2/5+"px");
-	
-	$("#courseTitleRect").mouseenter(function(e){
-		$("#ctr1").animate({opacity:1});
-		$("#ctr2").animate({opacity:1});
-	});
-	$("#courseTitleRect").mouseleave(function(e){
-		$("#ctr1").animate({opacity:0});
-		$("#ctr2").animate({opacity:0});
-	});
-	
-	$("#r11").mouseenter(function(e){
-		//alert();
-		$("#r11c").show("slow");
-	});
-	$("#r11").mouseleave(function(e){
-		//alert();
-		$("#r11c").hide("slow");
-	});
 	//************
 	$("#formAction").mouseover(function(){
 		$(this).animate({
@@ -53,7 +37,12 @@ $(function(){
 		},'normal');
 	});
 });
-	
+
+		
+function showVideo(){
+	//alert("a");
+	$('#myModal').modal('toggle');
+}
 </script>
 	<!-- navbar -->
 	<nav class="navbar navbar-default custom" role="navigation"  style="background-image:url(./img/2nd/navi_bg.png)">
@@ -71,6 +60,24 @@ $(function(){
 	</nav>
 	<hr style="margin-top: 0px;margin-bottom: 0px;border-top: 4px #92a4a4 dashed;background-image: url(./img/2nd/navi_bg.png);">
 	<div class="container-fluid fullHeight">
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top: 6%;">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header" style="background-image: url(./img/2nd/navi_bg.png);padding:0px;border-bottom:1px solid #3F1414;">
+				<button type="button" class="close" style="margin: 15px;" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<img src="./img/2nd/navi_logo.png" height="50px">
+			  </div>
+			  <div class="modal-body" style="text-align:center;padding:0px;">
+				<iframe height=400 width=100% src="http://player.youku.com/embed/XNzM5MTkwOTE2" frameborder=0 allowfullscreen></iframe>
+			  </div>
+			  <div class="modal-footer hide">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
 		<!-- intro区域 -->
 		<div id="introRect"class="row bigRect" style="background-color:#ff8264;min-height:520px;">
 			<div style="width:100%;height:100%;position:absolute;left:0px;top:0px;z-index:0;">
@@ -84,7 +91,7 @@ $(function(){
 				<div id="introVideo">
 					<img src="./img/2nd/intro_title.png"  style="">
 					<p style="color: #FFFFFF;font-size: 260%;margin-top: 10%;margin-bottom: 10%;margin-right: 10%;text-align: right;">泛IT学科大讲堂</p>
-					<p style="color: #FFFFFF;font-size: 180%;margin-top: 10%;margin-bottom: 10%;margin-right: 10%;text-align: right;">了解更多 <img src="./img/2nd/intro_direct.png" style="width: 30px;margin-bottom: 5px;"></p>
+					<p style="color: #FFFFFF;font-size: 180%;margin-top: 10%;margin-bottom: 10%;margin-right: 10%;text-align: right;"><a href="javascript:void(0);" onClick="showVideo();">了解更多 <img src="./img/2nd/intro_direct.png" style="width: 30px;margin-bottom: 5px;"></a></p>
 				</div>
 				<!-- 登录表单 -->
 				<div>
@@ -185,15 +192,30 @@ $(function(){
 		<!-- 六边形课程展示 -->
 		<div id="courseTitleRect" class="row bigRect" style="background-image: url('./img/2nd/hexagon_shadow.png');">
 				<div class="row" id="ctr1" style="opacity:0;">
-					<div id="r11" class="col-xs-4" style="background-color: #eae;text-align: center;height: 10px;">
-						<div id="r11c" style="display:none;background-color:#aaa;width: 100%;height: 60px;left: 0px;position: absolute;"></div>
+					<div id="r11" class="col-xs-4" style="text-align: center;">
+						<button id="r11b" href="#" class="button button-pill button-flat button-tiny"></button>
+						<div id="r11c" style="display:none;background-color:#aaa;width: 80%;margin:10px 10% 0 10%;left: 0px;position: absolute;">
+							<p class="title">C++</p>
+							<p class="teacher">主讲人:<span class="name">朱老师</span></p>
+							<p class="content">以企业级的项目作为切入，快速掌握常见C++库文件。并开设底层和游戏方向专门课程。</p>
+						</div>
 					</div>
-					<div class="col-xs-4" style="
-					background-color: #eea;
-				">2</div>
-				  <div class="col-xs-4" style="
-					background-color: #bca;
-				">3</div>
+					<div id="r12" class="col-xs-4" style="text-align: center;">
+						<button id="r12b" href="#" class="button button-pill button-flat button-tiny"></button>
+						<div id="r12c" style="display:none;background-color:#aaa;width: 80%;margin:10px 10% 0 10%;left: 0px;position: absolute;">
+							<p class="title">C++</p>
+							<p class="teacher">主讲人:<span class="name">朱老师</span></p>
+							<p class="content">以企业级的项目作为切入，快速掌握常见C++库文件。并开设底层和游戏方向专门课程。</p>
+						</div>
+					</div>
+					<div id="r13" class="col-xs-4" style="text-align: center;">
+						<button id="r13b" href="#" class="button button-pill button-flat button-tiny"></button>
+						<div id="r13c" style="display:none;background-color:#aaa;width: 80%;margin:10px 10% 0 10%;left: 0px;position: absolute;">
+							<p class="title">C++</p>
+							<p class="teacher">主讲人:<span class="name">朱老师</span></p>
+							<p class="content">以企业级的项目作为切入，快速掌握常见C++库文件。并开设底层和游戏方向专门课程。</p>
+						</div>
+					</div>
 				</div>
 			    <div class="row" style="margin-bottom:-7%;">
 						<img id="imgOne"  src=" img/frontpage/sexangle1.png">
@@ -207,18 +229,46 @@ $(function(){
 						<img id="imgSeven" src=" img/frontpage/sexangle7.png">	
 			    </div>
 				<div class="row"  id="ctr2" style="opacity:0;">
-				  <div class="col-xs-3" style="
-					background-color: #eee;
-				">1</div>
-				  <div class="col-xs-3" style="
-					background-color: #aaa;
-				">2</div>
-				  <div class="col-xs-3" style="
-					background-color: #abc;
-				">3</div>
-				  <div class="col-xs-3" style="
-					background-color: #bca;
-				">4</div>
+					<div id="r21" class="col-xs-3" style="text-align: center;">
+						<div style="height: 1px;position: absolute;top: 0;left: 0;width: 100%;">
+							<div id="r21c" style="display:none;background-color:#aaa;margin-bottom:10px;width: 100%;bottom:0px;left: 0px;position: absolute;">
+								<p class="title">C++</p>
+								<p class="teacher">主讲人:<span class="name">朱老师</span></p>
+								<p class="content">以企业级的项目作为切入，快速掌握常见C++库文件。并开设底层和游戏方向专门课程。</p>
+							</div>
+						</div>
+						<button id="r21b" href="#" class="button button-pill button-flat button-tiny"></button>
+					</div>
+					<div id="r22" class="col-xs-3" style="text-align: center;">
+						<div style="height: 1px;position: absolute;top: 0;left: 0;width: 100%;">
+							<div id="r22c" style="display:none;background-color:#aaa;margin-bottom:10px;width: 100%;bottom:0px;left: 0px;position: absolute;">
+								<p class="title">C++</p>
+								<p class="teacher">主讲人:<span class="name">朱老师</span></p>
+								<p class="content">以企业级的项目作为切入，快速掌握常见C++库文件。并开设底层和游戏方向专门课程。</p>
+							</div>
+						</div>
+						<button id="r22b" href="#" class="button button-pill button-flat button-tiny"></button>
+					</div>
+					<div id="r23" class="col-xs-3" style="text-align: center;">
+						<div style="height: 1px;position: absolute;top: 0;left: 0;width: 100%;">
+							<div id="r23c" style="display:none;background-color:#aaa;margin-bottom:10px;width: 100%;bottom:0px;left: 0px;position: absolute;">
+								<p class="title">C++</p>
+								<p class="teacher">主讲人:<span class="name">朱老师</span></p>
+								<p class="content">以企业级的项目作为切入，快速掌握常见C++库文件。并开设底层和游戏方向专门课程。</p>
+							</div>
+						</div>
+						<button id="r23b" href="#" class="button button-pill button-flat button-tiny"></button>
+					</div>
+					<div id="r24" class="col-xs-3" style="text-align: center;">
+						<div style="height: 1px;position: absolute;top: 0;left: 0;width: 100%;">
+							<div id="r24c" style="display:none;background-color:#aaa;margin-bottom:10px;width: 100%;bottom:0px;left: 0px;position: absolute;">
+								<p class="title">C++</p>
+								<p class="teacher">主讲人:<span class="name">朱老师</span></p>
+								<p class="content">以企业级的项目作为切入，快速掌握常见C++库文件。并开设底层和游戏方向专门课程。</p>
+							</div>
+						</div>
+						<button id="r24b" href="#" class="button button-pill button-flat button-tiny"></button>
+					</div>
 				</div>
     		</div>
 		<!-- 我们的优势 -->
