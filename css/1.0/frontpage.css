@@ -4,6 +4,7 @@ html{
 
 body{
 	height: 100%;
+	font-family:arial, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '宋体', \5b8b\4f53, Tahoma, Arial, Helvetica, STHeiti;
 }
 
 #toLogin:hover{
@@ -14,10 +15,7 @@ body{
 	display: none;
 	width: 100%;
 	font-size:2rem;
-	margin-top: 5%;
-	padding:5%;
-	background-color:rgba(233, 128, 103, 1);
-	color:rgba(14, 58, 78, 1);;
+	color:#ffffff;
 }
 
 .regLog input{
@@ -32,9 +30,9 @@ body{
 #doAction{
 	width:80%;
 	margin-top: 25px;
-	background-color:#5691AF;
+	background-color:#de2e39;
 	border-radius:5px;
-	border-bottom: 5px solid rgba(52, 92, 152, 1);
+	border-bottom: 5px solid #B81A23;
 	font-size: 2rem;
 	height:40px;
 	transition: background 1s;
@@ -45,7 +43,7 @@ body{
 }
 
 #doAction:hover{
-	background-color: rgba(107, 182, 221, 1);
+	background-color: #F14F5A;
 }
 
 .fullHeight{
@@ -68,37 +66,28 @@ body{
 }
 
 .bigRect  img{
-	max-height: 100%;
+	max-height:100%;
 	max-width:100%;
 }
 
-#logoRect{
-	padding-top: 5%;
-	padding-bottom:5%;
-}
-
-#logoRect .introduce{
-	color:rgba(14, 58, 78, 1);
-	padding-top: 5%;
-	font-size: 12px;
-	font-size: 1.2em;
+#introRect{
+	padding-top: 3%;
+	height:520px;
 }
 
 
-
-
-#courseRect img{
-	min-width:100%;
-	height: auto;
+#guideRect{
+	height:200px;
+}
+#guideRect p{
+	color:#ffffff;
+	font-size:4rem;
+	margin:20px;
 }
 
-#courseRect .col-md-3{
-	padding: 0px;
-	min-height: 100%;
-}
 
 #courseTitleRect{
-	background-color: rgb(255, 174, 154);
+	background-color: #de2e39;
 	padding: 10%;
 	background-repeat: no-repeat;
 	background-size: 0;
@@ -119,46 +108,66 @@ body{
 	opacity: 0;
 }
 
-#topicRect {
-	min-height: 55%;
+#advRect .row{
+	margin-top:5%;
+	margin-bottom:5%;
+}
+#advRect p{
+	color:#ffffff;
+	margin:2% 0 2% 0;
 }
 
-#topicRect img{
-	width:45%;
+#advRect .title{
+	font-size:200%;
+	font-weight:bold;
 }
-
-
-.topicList{
-	font-size: 3rem;
-	padding-left: 15%;
+#advRect .content{
+	font-size:130%;
 }
 
 #regRect{
-	/*padding-top:10%;*/
-	height: 60%;
-	background-color:#f0e0ac;
+	background-color:#979a29;
+	max-height:580px;
 }
-
 #regRect p{
-	font-size: 10rem;
-	font-weight: 10;
-	text-align: center;
-	color:rgba(93, 93, 20, 1);
-	transition: color 1s;
-	-moz-transition: color 1s;	/* Firefox 4 */
-	-webkit-transition: color 1s;	/* Safari 和 Chrome */
-	-o-transition: color 1s;	/* Opera */
+	color:#ffffff;
+	margin:10% 0 10% 0;
 }
-
-
-#regRect p:hover{
-	color:rgba(71, 82, 162, 1);
-	cursor:pointer;
+#regRect .content{
+	font-size:5rem;
+	font-weight:bold;
 }
 
 #aboutRect{
-	padding:5%;
-	color:white;
+	background-color:#1e252d;
+	padding:2% 0 2% 0;
+}
+#aboutRect p{
+	color:#c9c2b2;
+	margin:2% 0 2% 0;
+	text-align:center;
+}
+
+#aboutRect .title{
+	font-size:2rem;
+	font-weight:bold;
+	margin:10% 0 10% 0;
+}
+#aboutRect .content{
+	font-size:1.5rem;
+	margin:2% 0 2% 0;
+}
+
+#footer{
+	padding:2% 0 2% 0;
+}
+
+
+#footer p{
+	color:#555f65;
+	font-size:1rem;
+	text-align:center;
+	font-weight:bold;
 }
 
 .logReg{
@@ -190,8 +199,13 @@ body{
 .hide{
 	display:none;
 }
+<<<<<<< HEAD
 
 @media  screen and (max-width: 1500px) {
+=======
+@media  screen and (max-width: 800px) {
+	/*
+>>>>>>> 1f7705a61fa96bf1923ded78d93e662544279316
 	html{
 		
 		font-size: 35.5%;
@@ -211,9 +225,9 @@ body{
 		width:65%;
 	}
 	#regRect{
-		/*padding-top:10%;*/
 	}
 	#regRect p{
 		font-size: 18rem;
 	}
+	*/
 }
