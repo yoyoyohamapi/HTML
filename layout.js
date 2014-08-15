@@ -54,6 +54,21 @@ $(function(){
 		}	
 	});
 
+	//搜索过度:
+	$('.search i').mouseenter(function(){
+		$(this).animate({
+			marginTop:-12,
+			marginLeft:-5
+		});
+	});
+
+	$('.search i').mouseleave(function(){
+		$(this).animate({
+			marginTop:0,
+			marginLeft:0
+		});
+	});
+
 	//拉出搜索框
 	$('.search').click(function(){
 		if($("#search_content").width()==0){
