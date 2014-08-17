@@ -56,16 +56,16 @@ $(function(){
 
 	//搜索过度:
 	$('.search i').mouseenter(function(){
-		$(this).animate({
-			marginTop:-12,
-			marginLeft:-5
+		$(this).transit({
+			y:-8,
+			x:-5
 		});
 	});
 
 	$('.search i').mouseleave(function(){
-		$(this).animate({
-			marginTop:0,
-			marginLeft:0
+		$(this).transit({
+			y:0,
+			x:0
 		});
 	});
 
