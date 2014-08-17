@@ -17,10 +17,6 @@ $(function(){
 	mozilla: /mozilla/.test( userAgent ) && !/(compatible|webkit)/.test( userAgent ) 
 
 	}; 
-	// //火狐以及IE需要重构滚动条
-	// if($(".conPanelCon").length>0 && ($.browser.mozilla || $.browser.msie)){
-	// 	$(".conPanelCon").mCustomScrollbar();
-	// }
 	//左侧导航贴边自适应
 	warpLoc();
 	$(window).resize(function(){
@@ -28,66 +24,67 @@ $(function(){
 	});
 	// 头像拉出菜单
 	$('.headPic').click(function(){
-		if($('#search_content').width()!=0)
-			$("#search_content").animate({
-				width:0,
-				opacity:0
-			},'slow',function(){
-				$("#search_content").hide();
-			});
-		if($('#settingsMenu').width()==0){
-			$('.search').fadeOut();
-			$('#settingsMenu').fadeTo('fast',0,function(){
-				$('#settingsMenu').animate({
-					width:250,
-					opacity:1
-				},'slow');
+		if($('#settingsMenu').css('opacity')==0){
+			$('#settingsMenu').show();
+			$('.searchLi').fadeOut('normal',function(){
+				$('.headPicLi').transit({
+					x:-230
+				},function(){
+					$('#settingsMenu').transit({
+						opacity:1
+					});
+				});
 			});
 		}
 		else{
-			$('#settingsMenu').animate({
-				width:0,
+			$('#settingsMenu').transit({
 				opacity:0
-			},'slow',function(){
-				$('.search').fadeIn();
-			});
-		}	
-	});
-
-	//搜索过度:
-	$('.search i').mouseenter(function(){
-		$(this).transit({
-			y:-8,
-			x:-5
-		});
-	});
-
-	$('.search i').mouseleave(function(){
-		$(this).transit({
-			y:0,
-			x:0
-		});
+			},function(){
+				$('#settingsMenu').hide();
+				$('.headPicLi').transit({
+					x:0
+				},function(){
+					$('.searchLi').fadeIn();
+				});
+			});	
+		}
 	});
 
 	//拉出搜索框
 	$('.search').click(function(){
-		if($("#search_content").width()==0){
-			$("#search_content").fadeTo('fast',0,function(){
-				$("#search_content").animate({
-					width:200,
-					opacity:1
-				},'slow');
+		if($("#searchCon").css('opacity')==0){
+			$('.search i').transit({
+				y:-8,
+				x:-5
 			});
-			
+			$("#searchCon").show();
+			$('.headPicLi').fadeOut(function(){
+				$(".searchLi").transit({
+					x:70
+				},function(){
+					$("#searchCon").transit({
+						opacity:1
+					});
+				});
+			});
 		}
 		else{
-			$("#search_content").animate({
-				width:0,
+			$('.search i').transit({
+				y:0,
+				x:0
+			});
+			$('#searchCon').transit({
 				opacity:0
-			},'slow',function(){
-				$("#search_content").hide();
+			},function(){
+				$('#searchCon').hide();
+				$('.searchLi').transit({
+					x:0
+				},function(){
+					$('.headPicLi').fadeIn();
+				});
 			});
 		}
+		
 	});
 
 	//右侧面板导航元素宽度自适应
