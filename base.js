@@ -1,5 +1,5 @@
 $(function(){
-	//浏览器内核判断
+//浏览器内核判断
 	var userAgent = navigator.userAgent.toLowerCase(); 
 
 	// Figure out what browser is being used 
@@ -17,11 +17,16 @@ $(function(){
 	mozilla: /mozilla/.test( userAgent ) && !/(compatible|webkit)/.test( userAgent ) 
 
 	}; 
-	//左侧导航贴边自适应
-	warpLoc();
-	$(window).resize(function(){
+
+	//导航贴边自适应
+	if($('.imgWrap').length>0)
 		warpLoc();
+		
+	$(window).resize(function(){
+		if($('.imgWrap').length>0)
+			warpLoc();
 	});
+
 	// 头像拉出菜单
 	$('.headPic').click(function(){
 		if($('#settingsMenu').css('opacity')==0){
@@ -85,19 +90,16 @@ $(function(){
 			});
 		}
 		
-	});
-
-	//右侧面板导航元素宽度自适应
-	if($(".conPanelNav").length>0){
-		var ratio = 1 / $(".conPanelNav li").length;
-		var ratioStr = ratio*100+"%";
-		$(".conPanelNav li").css("width",ratioStr);
-	}
-
-	
+	});	
 });
 
 function warpLoc(){
-	top_css =parseInt($(".barItem.active").offset().top) - parseInt($(".leftBar ul").offset().top)+parseInt($(".leftBar .barItem").css("margin-top").replace('px',''))-10
-	$(".imgWrap").css("top",top_css);
+	$(".imgWrap").each(function(){
+		if($(".leftBar").length>0)
+			top_css = parseInt($(".barItem.active").offset().top) - parseInt($(".leftBar ul").offset().top)+parseInt($(".leftBar .barItem").css("margin-top").replace('px',''))-10
+		else
+			top_css = parseInt($(".barItem.active").offset().top) - parseInt($(".navbar").css('height'));
+		$(this).css("top",top_css);
+	});
+	
 }

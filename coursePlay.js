@@ -1,0 +1,26 @@
+$(function(){
+	//隐藏侧边栏
+	$('#hideRightBar').click(function(){
+		$('.rightBar').transit({
+				x:100
+		},function(){
+			$('#showRightBar').fadeIn(function(){
+				$('.coursePanel').transit({
+					x:$('.rightBar').width()
+				});
+			});
+		});
+	});
+	//显示侧边栏
+	$('#showRightBar').click(function(){
+		$('#showRightBar').fadeOut(function(){
+			$('.coursePanel').transit({
+				x:0
+			},function(){
+				$('.rightBar').transit({
+					x:0
+				});
+			});
+		});
+	});
+});
