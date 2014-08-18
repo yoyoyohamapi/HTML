@@ -3,11 +3,11 @@ $(function(){
 	$(".leftControls a").mouseenter(function(){
 		$(this).next().transit({
 			opacity:1
-		},500);
+		},300);
 	});
 	$(".leftControls a").mouseleave(function(){
 		$(this).next().transit({
 			opacity:0
-		},500);
+		},300);
 	});
 });
