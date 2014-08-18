@@ -1,5 +1,5 @@
 $(function(){
-	var height =  document.body.offsetHeight;
+	var height = $(window).height()+ document.body.offsetHeight;
 	$('.shadeForHighlight').css('height',height);
 	//隐藏侧边栏
 	$('#hideRightBar').click(function(){
