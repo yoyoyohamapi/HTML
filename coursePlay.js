@@ -1,4 +1,6 @@
 $(function(){
+	var height =  document.body.offsetHeight;
+	$('.shadeForHighlight').css('height',height);
 	//隐藏侧边栏
 	$('#hideRightBar').click(function(){
 		$('.rightBar').transit({
