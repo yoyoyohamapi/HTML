@@ -227,8 +227,13 @@ body{
 .hide{
 	display:none;
 }
+<<<<<<< HEAD
+
+@media  screen and (max-width: 1500px) {
+=======
 @media  screen and (max-width: 800px) {
 	/*
+>>>>>>> 1f7705a61fa96bf1923ded78d93e662544279316
 	html{
 		
 		font-size: 35.5%;
