@@ -9,6 +9,7 @@ $(function(){
 					x:$('.rightBar').width()
 				});
 			});
+			turnLightOn();
 		});
 	});
 	//显示侧边栏
@@ -20,7 +21,18 @@ $(function(){
 				$('.rightBar').transit({
 					x:0
 				});
+				turnLightOff();
 			});
 		});
 	});
 });
+
+//开灯操作
+function turnLightOn(){
+
+	$('.shadeForHighlight').fadeIn();
+}
+
+function turnLightOff(){
+	$('.shadeForHighlight').fadeOut();
+}

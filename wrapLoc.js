@@ -6,8 +6,5 @@ $(function(){
 		warpLoc();
 	});
 
-	
-
-	
 });
 

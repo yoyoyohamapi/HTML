@@ -616,6 +616,10 @@ body{
 
 .conPanel.coursePanel{
 	margin-left: 5%;
+	padding:1%;
+	overflow: hidden;
+	z-index: 2001;
+	position:relative;
 }
 
 .container-fluid.mainCon.courseCon{
@@ -659,8 +663,18 @@ body{
 	top: 300px;
 	color: #ccc;
 	display: none;
+	z-index:2001;
 }
 
 #showRightBar:hover{
 	cursor:pointer;
+}
+
+.shadeForHighlight{
+	background-color: rgba(0, 0, 0, 0.88);
+	z-index: 2000;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: none;
 }
