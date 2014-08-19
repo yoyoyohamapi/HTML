@@ -1,10 +1,29 @@
 html{
 	height: 100%;
+	font-size: 62.5%;
 }
 
 body{
 	min-height: 100%;
+	font-size: 1.4rem;
 	background-color:#edeff0;
+}
+
+a:hover{
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.button{
+	font-family: inherit;
+	-webkit-transition-property: background;
+	  -moz-transition-property: background;
+	  -o-transition-property: background;
+	  transition-property: background;
+	  -webkit-transition-duration: 0.3s;
+	  -moz-transition-duration: 0.3s;
+	  -o-transition-duration: 0.3s;
+	  transition-duration: 0.3s;
 }
 
 .container-fluid.mainCon{
@@ -564,20 +583,7 @@ body{
 	right:0px;
 }
 
-@media  screen and (max-width: 1366px) {
-	.rlBar.leftBar{
-		height:550px;
-	}
 
-	.rlBar.leftBar .barItem{
-		margin-top: 25px;
-	}
-
-	.conPanel{
-		height: 550px;
-	}
-
-}
 
 /**************************************以下是课程播放页面设置************************************************/
 .rlBar.rightBar{
@@ -725,7 +731,6 @@ body{
 	text-decoration: none;
 	cursor:pointer;
 	box-shadow: 0px 0px 10px #b01e00;
-	
 }
 
 .leftControls ul > li >span{
@@ -735,6 +740,189 @@ body{
 }
 
 .workstationPanel{
-	height: 500px;
+	min-height: 1000px;
+	margin-left: 5%;
+	font-size: 10px;
+	color:#b01e00;
 
 }
+
+.continueLearning{
+	background-color: #ffffff;
+	padding: 0;
+	position: relative;
+	box-shadow: 2px 2px 2px #ccc;
+	border: none;
+}
+
+.continueLearning .cLImg{
+	width:70%;
+	float: left;
+
+}
+
+.continueLearning .cLImg img{
+	width: 100%;
+}
+
+.continueLearning .cLInfo{
+	width: 30%;
+	padding:1%;
+	padding-top:5%;
+	padding-bottom: 0; 
+	float: left;
+	position: relative;
+}
+
+.continueLearning .cLInfo p{
+	text-align: center;
+	margin-bottom: 10%;
+}
+
+.continueLearning .cLInfo p:nth-child(1){
+	font-size: 4em;
+}
+
+.continueLearning .cLInfo p:nth-child(2){
+	font-size:2em;
+	font-weight: 700; 
+	margin-bottom: 5%;
+}
+
+.continueLearning .cLInfo p:nth-child(3){
+	font-size:2em;
+}
+
+.continueLearning div.continueButton{
+	position: absolute;
+	width: 30%;
+	top:70%;
+	right: 0;
+	text-align: center;
+}
+
+.continueLearning div.continueButton a{
+	font-size: 4em;
+}
+
+.workstationPanel .panelTitle{
+	position: absolute;
+	font-size: 5em;
+	top:0;
+	left: 0;
+	padding:1%;
+	padding-left: 4%;
+	color:white;
+	width: 70%;
+	z-index: 1000;
+}
+
+.continueLearning div.continueCTitle{
+	position: absolute;
+	font-size: 4em;
+	bottom:0;
+	left: 0;
+	padding: 3%;
+	width:70%;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.continueLearning div.progressBar{
+	width:40%;
+	height: 0.8em;
+	background-color:#b01e00; 
+	position: absolute;
+	left: 0;
+	bottom:0;
+}
+
+.button.button-large.button-flat-flame{
+	background: #b01e00;
+	border-radius: 5px;
+	border: none;
+	border-bottom: 3px solid #761703;
+	color: #ffffff;
+	width: 80%;
+	box-shadow: none;
+	padding: 2%;
+	height: auto;
+}
+
+.button.button-large.button-flat-flame:hover{
+	background: rgb(231, 43, 4);
+}
+
+/*猜你喜欢面板*/
+.whatULike{
+	margin-top:2%;
+	padding: 0;
+	box-shadow: 2px 2px 2px #ccc;
+	position: relative;
+}
+
+.whatULike  .carousel-inner > .item > img, .carousel-inner > .item > a > img{
+	width: 100%;
+	border: none;
+}
+
+.whatULike .carousel-caption{
+	background-color: rgba(255,255,255,0.6);
+	min-height: 8em;
+	position:absolute;
+	width: 100%;
+	bottom:0;
+	left: 0;
+	padding: 0;
+	color: #656464;
+	text-shadow: none;
+	overflow: hidden;
+	text-overflow:ellipsis; 
+
+}
+
+.whatULike .carousel-caption .wULCTitle{
+	width: 20%;
+	font-size: 5em;
+	padding-top: 2%;
+	float: left;
+}
+
+.whatULike .carousel-caption .wULCIntro{
+	width: 80%;
+	font-size: 2em;
+	padding: 1em;
+	float: left;
+}
+
+.whatULike .carousel-control {
+	background: none;
+	opacity: 0.7;
+	font-size: 2em;
+	text-shadow:none;
+}
+
+.whatULike .carousel-control:hover{
+	opacity: 1;
+}
+
+
+
+@media  screen and (max-width: 1366px) {
+	.rlBar.leftBar{
+		height:550px;
+	}
+
+	.rlBar.leftBar .barItem{
+		margin-top: 25px;
+	}
+
+	.conPanel{
+		height: 550px;
+	}
+
+	.workstationPanel{
+		font-size: 7px;
+	}
+
+}
+
