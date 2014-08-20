@@ -28,6 +28,11 @@ $(function(){
 		}
 	});
 
+	$(".toTop").click(function(){
+		$("html,body").animate({
+			scrollTop:0
+		},500);
+	});
 	//导航贴边自适应
 	if($('.imgWrap').length>0)
 		warpLoc();
