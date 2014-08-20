@@ -48,6 +48,7 @@ a:hover{
 	height: 80px;
 	overflow: hidden;
 	z-index: 1000;
+	margin-bottom: 0px;
 }
 
 .navbar.navbar-default.nav-custom .container-fluid{
@@ -631,7 +632,6 @@ a:hover{
 
 .container-fluid.mainCon.courseCon{
 	padding-top: 0%;
-	margin-top: -20px;
 }
 
 .breadcrumb.courseBC{
@@ -687,50 +687,58 @@ a:hover{
 
 /***********************************Workstation********************************************/
 .leftControls{
-	position: absolute;
+	position: fixed;
 	left: 0px;
 	top:0px;
+	bottom:;
 	width:8%;
-	height: 100%;
-	border-right:5px solid #ccc;
 }
 
 .leftControls ul{
 	list-style: none;
 	width: 100%;
-	position: absolute;
-	top: 25%;
+	top: 150px;
 	padding: 1%;
-
+	position: absolute;
+	z-index: 5000;
 }
 
-.leftControls ul > li {
-	text-align: center;
+/*.leftControls ul > li {
 	margin-bottom: 20px;
-	margin-left: 10%;
 	width:80%;
-}
+}*/
 
-.leftControls ul > li >a{
+.leftControls ul > li{
+	display: block;
+	max-height: 5em;
+	padding:1em;
+	border: 1px solid rgba(197, 197, 197, 1);
+	box-shadow: 2px 2px 2px rgba(192, 190, 190, 1);
+	text-align: center;
+	margin-top: 10px;
 	color:#b01e00;
-	min-width: 6rem;
-	min-height: 6rem;
-	padding-top: 18%;
-	font-size: 3.5rem;
-	border:solid 2px #b01e00;
-	border-radius: 50%;
+	width: 90%;
+	margin-left: 5%;
+	overflow: hidden;
 	
-	transition-property: box-shadow;
-	-webkit-transition-duration: 0.3s;
-	-moz-transition-duration: 0.3s;
-	-o-transition-duration: 0.3s;
-	transition-duration: 0.3s;
+}
+.leftControls ul > li >a{
+	display: block;
+	width: 100%;
+	font-size: 3em;
+	color:inherit;
 }
 
-.leftControls ul > li >a:hover{
+.leftControls ul > li >a:nth-child(2){
+	font-size: 2em;
+	letter-spacing: 0.1em;
+	margin-top: 200px;
+}
+
+.leftControls ul > li:hover{
 	text-decoration: none;
 	cursor:pointer;
-	box-shadow: 0px 0px 10px #b01e00;
+	background-color: #ffffff;
 }
 
 .leftControls ul > li >span{
@@ -744,7 +752,10 @@ a:hover{
 	margin-left: 5%;
 	font-size: 10px;
 	color:#b01e00;
-
+	margin-bottom: 80px;
+	position: relative;
+	width: 100%;
+	margin-top: 40px;
 }
 
 .continueLearning{
@@ -904,7 +915,172 @@ a:hover{
 .whatULike .carousel-control:hover{
 	opacity: 1;
 }
+.liveOther{
+	margin-top:2%;
+	padding:0;
+	min-height:500px;
+	background-color: #ffffff;
+	margin-bottom:2%;
+	box-shadow: 2px 2px 2px #ccc;
 
+}
+
+/*直播轴*/
+.liveLine{
+	border-right: 2px dashed #656464;
+	border-left:0.5em solid #b01e00; 
+	padding: 0;
+	font-size: 1em;
+}
+
+
+
+.liveLine .panelTitle{
+	color:rgb(190, 187, 187);
+	margin-left: 20px;
+}
+
+.liveLine > .liveItem{
+	padding: 2%;
+	position: relative;
+	display: block;
+	float: left;
+	margin-bottom: 15%;
+}
+.liveLine > .liveItem:nth-child(2){
+	margin-top: 25%;
+}
+
+.liveLine > .liveItem .liveTitle{
+	background-color: rgb(238, 238, 238);
+	color:#656464;
+	padding: 10px;
+	font-size: 2.5em;
+	border-radius: 5px;
+	margin-left: 20px;
+}
+
+.liveLine > .liveItem.active .liveTitle{
+	background-color: #b01e00;
+	color:#ffffff;
+}
+
+/*The pot*/
+.liveLine > .liveItem .liveTitle:before{
+	content:"";
+	width:30px;
+	height: 30px;
+	background-color: #ffffff;
+	border:5px solid #b01e00;
+	border-radius: 50%;
+	position: absolute;
+	left:-20px;
+}
+
+/*The triangle*/
+.liveLine > .liveItem .liveTitle:after{
+	content: "";
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 10px 20px 10px 0px;
+	border-color: transparent rgb(238,238,238) transparent   transparent ;
+	position: absolute;
+	left: 10px;
+	top: 50%;
+}
+
+.liveLine > .liveItem.active .liveTitle:after{
+	border-color: transparent #b01e00 transparent   transparent ;
+
+}
+
+.liveLine > .liveItem .liveTime{
+	font-size: 2em;
+	margin-left: 15px;
+	color:#656464;
+}
+.liveLine > .liveItem.active .liveTime{
+	color:#b01e00;
+	font-weight: 700;
+}
+
+.liveLine > .liveItem.active .liveTime span{
+	position: absolute;
+	right: 10px;
+}
+
+.otherPanel{
+	font-size: 1em;
+}
+
+.otherPanel .row{
+	text-align: center;
+	margin-top: 5em;
+}
+
+.otherPanel .panelTitle{
+	color:rgb(190, 187, 187);
+}
+.otherPanel  .controlBtn{
+	color:rgb(150, 150, 150);
+	display: block;
+	padding-top:1.5em; 
+	width: 5em;
+	height: 5em;
+	border: 2px solid rgb(219, 219, 219);
+	border-radius: 50%;
+	font-size: 5em;
+	-webkit-transition-property: background,color;
+	  -moz-transition-property: background,color;
+	  -o-transition-property: background,color;
+	  transition-property: background,color;
+	  -webkit-transition-duration: 0.2s;
+	  -moz-transition-duration: 0.2s;
+	  -o-transition-duration: 0.2s;
+	  transition-duration: 0.2s;
+}
+
+.otherPanel  .controlBtn:hover{
+	color:#ffffff;
+	background-color: #b01e00;
+}
+
+
+.rightControls{
+	position: fixed;
+	bottom: 20px;
+	right: 0;
+}
+
+.rightControls > ul{
+	list-style: none;
+}
+
+.rightControls > ul >li{
+	display: block;
+	width: 5em;
+	height: 5em;
+	border-radius: 50%;
+	border:2px solid rgb(150,150,150);
+	text-align: center;
+	margin-top: 10px;
+	color:rgb(150,150,150);
+
+}
+
+.rightControls > ul >li:hover{
+	background-color: #ffffff;
+}
+
+.rightControls > ul >li >a{
+	font-size: 3em;	
+	color:inherit;
+}
+/*向上滚动*/
+.toTop{
+	display: none;
+}
 
 
 @media  screen and (max-width: 1366px) {

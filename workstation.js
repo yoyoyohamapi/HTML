@@ -1,13 +1,13 @@
 $(function(){
 	//左侧操作栏过度
-	$(".leftControls a").mouseenter(function(){
-		$(this).next().next().transit({
-			opacity:1
-		},300);
+	$(".leftControls li").mouseenter(function(){
+		$(this).children().transit({
+			y:-200-$(this).children().height()
+		},800);
 	});
-	$(".leftControls a").mouseleave(function(){
-		$(this).next().next().transit({
-			opacity:0
-		},300);
+	$(".leftControls li").mouseleave(function(){
+		$(this).children().transit({
+			y:0
+		},800);
 	});
 });

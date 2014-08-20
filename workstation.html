@@ -50,16 +50,17 @@
 
 <!-- Content -->
 <div class="container-fluid">
-	<!-- 左侧操作区 -->
-	<div class="leftControls clearfix">
-		<ul>
-			<li><a class="fa fa-paper-plane-o"></a><br><span>消息</span></li>
-			<li><a class="fa fa-graduation-cap"></a><br><span>证书</span></li>
-			<li><a class="fa fa-calendar"></a><br><span>课程表</span></li>
-		</ul>
-	</div>
-	<div class="row clearfix">
-		<div class="col-md-9 col-md-offset-1">
+	
+	<div class="row clearfix" style="position:relative;">
+		<!-- 左侧操作区 -->
+		<div class="leftControls clearfix">
+			<ul>
+				<li><a class="fa fa-paper-plane-o"></a><a>消息</a></li>
+				<li><a class="fa fa-graduation-cap"></a><a>证书</a></li>
+				<li><a class="fa fa-calendar"></a><a>日历</a></li>
+			</ul>
+		</div>
+		<div class="col-md-9 col-md-offset-1" style="border-left:5px solid #ccc;">
 			<div class="workstationPanel col-md-12">
 				<div class="col-md-12 continueLearning">
 					<div class="panelTitle">继续学习</div>
@@ -110,44 +111,64 @@
 						</a>
 					</div>
 				</div>
+				<div class="col-md-12 liveOther" style="">
+					<div class="col-md-4 liveLine">
+						<div class="panelTitle">直播轴</div>
+						<div class="liveItem">
+							<p class="liveTime">08-16 12:00</p>
+							<p class="liveTitle">PHP 绘图</p>
+						</div>
+						<div class="liveItem active">
+							<p class="liveTime">08-16 15:00 <span>正在直播...</span></p>
+							<p class="liveTitle">Android系统ROOT原理解析</p>
+						</div>
+						<div class="liveItem">
+							<p class="liveTime">08-16 18:00</p>
+							<p class="liveTitle">响应式布局</p>
+						</div>
+					</div>
+					<div class="col-md-8 otherPanel">
+						<div class="panelTitle">更多</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="col-md-5 col-md-offset-3">
+									<a class="controlBtn">计划</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<a class="controlBtn">知识</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="col-md-5 col-md-offset-3">
+									<a class="controlBtn">课程</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<a class="controlBtn">任务</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
+		</div>
+		<div class="col-md-2 rightControls">
+			<ul>
+				<li class="">
+					<a><i class="fa fa-user" title="进入个人中心"></i></a>
+				</li>
+				<li class="">
+					<a><i class="fa fa-qrcode" title="扫描二维码"></i></a>
+				</li>
+				<!-- 返回顶部 -->
+				<li class="toTop">
+					<a><i class="fa fa-angle-up" title="返回顶部"></i></a>
+				</li>
+			</ul>
 		</div>
 	</div>
 </div>
 
-<!-- Footer -->
-<div class="footer">
-	<div class="container-fluid">
-		<div clas="row">
-			<!-- 关于我们  -->
-			<div class="col-md-3">
-				<p><h3>关于我们</h3></p>
-				<p><a href="">关于我们</a></p>
-				<p><a href="">关注我们</a></p>
-				<p><a href="">联系我们</a></p>
-				<p><a href="">加入我们</a></p>
-			</div>
-			<!-- 网站地图 -->
-			<div class="col-md-3">
-				<p><h3>网站地图</h3></p>
-				<p><a href="">全部课程</a></p>
-				<p><a href="">考试中心</a></p>
-				<p><a href="">我的主页</a></p>
-				<p><a href="">我的设置</a></p>
-			</div>
-			<!-- 帮助中心 -->
-			<div class="col-md-3">
-				<p><h3>帮助中心</h3></p>
-				<p><a href="">常见问题</a></p>
-				<p><a href="">联系客服</a></p>
-				<p><a href="">用户协议</a></p>
-				<p><a href="">版权说明</a></p>
-			</div>
-			<!-- 二维码 -->
-			<div class="col-md-3">
-				<img src="img/二维码图片.png" style="width:60%">
-			</div>		
-		</div>
-	</div>
-</div>	
+
 </body>
