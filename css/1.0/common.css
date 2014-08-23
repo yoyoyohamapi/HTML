@@ -1479,14 +1479,18 @@ a:hover{
 	font-size: 2em;
 	position: relative;
 	color: #fff;
-	padding: 10px 20px 10px;
+	padding: 10px 20px 5px;
 	text-align: center;
 }
 .view .mask a.info {
-	font-size: 2em;
+	width: 100%;
+	font-size: 20em;
+	position: absolute;
+	top:0;
+	left: 0;
+	color:rgba(231, 46, 46, 0.23);
 	display: inline-block;
 	text-decoration: none;
-	color: #fff;
 	border: none;
 }
 .view .mask a.info: hover {
