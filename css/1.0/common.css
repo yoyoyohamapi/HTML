@@ -946,6 +946,69 @@ a:hover{
 	box-shadow: 2px 2px 2px #ccc;
 
 }
+/**********************************时间轴**************************************/
+.timeLine{
+	list-style: none;
+	width: 100%;
+	padding-top:10px;
+	padding-bottom: 40px;
+}
+
+/* The line */
+.timeLine:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 5px;
+	background: #ccc;
+	left: 20%;
+	margin-left: -10px;
+}
+
+.timeLine > li{
+	position: relative;
+}
+
+.timeLine > li .tmtime{
+	font-size: 3em;
+	display: block;
+	width: 25%;
+	position: absolute;
+}
+
+/* Right content */
+.timeLine > li .tmlabel {
+	margin: 0 0 15px 25%;
+	font-size: 3em;
+	font-weight: 300;
+	line-height: 1.4;
+	position: relative;
+}
+
+/* The icons */
+.timeLine > li .tmicon {
+    width: 25px;
+    height: 25px;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 40px;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    color: #fff;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #ccc;
+    text-align: center;
+    left: 20%;
+    top: 0;
+    margin: 5px 0 0 -52px;
+}
+
+
 
 /*直播轴*/
 .liveLine{
@@ -954,6 +1017,8 @@ a:hover{
 	padding: 0;
 	font-size: 1em;
 }
+
+
 
 
 
@@ -1194,6 +1259,9 @@ a:hover{
 }
 
 .courseProfile .profileDetail .profileLPanel{
+	border-right:2px solid #ccc;
+	min-height: 400px;
+
 }
 
 
@@ -1208,7 +1276,7 @@ a:hover{
 }
 .courseProfile .profileDetail .profileRPanel{
 	padding:0;
-	border-left:2px solid #ccc;
+	min-height: 400px;
 
 }
 
@@ -1326,6 +1394,29 @@ a:hover{
 }
 
 .courseRec .courseRecCard img:hover{
+}
+
+.navCon{
+	padding: 0;
+	margin-top: 20px;
+	position: relative;
+}
+
+.navCon .unitInfo{
+	width: 100%;
+	float: left;
+	position: relative;
+}
+
+.navCon .unitInfo .unitTitle{
+	width: 100%;
+	margin: 0px 0px 10px 0px;
+	padding: 10px 0px 10px 20px;
+	font-size: 4em;
+	background-color: #656464;
+	color: white;
+	position: relative;
+	z-index: 2000;
 }
 
 
