@@ -13,7 +13,7 @@
 
 <!-- 自定义JS文件 -->
 <script src="showCourse.js"></script>
-<script src="showCourseContent.js"></script>
+<!--暂时注释 <script src="showCourseContent.js"></script>-->
 <script src="detectScroll.js"></script>
 <script src="formPanel.js"></script>
 
@@ -45,7 +45,7 @@ function showVideo(){
 }
 </script>
 	<!-- navbar -->
-	<nav class="navbar navbar-default custom" role="navigation"  style="background-image:url(./img/2nd/navi_bg.png)">
+	<nav class="navbar navbar-default custom" role="navigation"  style="background-image:url(./img/2nd/navi_bg.png);border-bottom: 4px #92a4a4 dashed;">
 		<div class="container-fluid">
 			<div class="navbar-header" style="margin-left:5%">
 				<img src="./img/2nd/navi_logo.png">
@@ -58,7 +58,6 @@ function showVideo(){
 			</div>
 		</div>
 	</nav>
-	<hr style="margin-top: 0px;margin-bottom: 0px;border-top: 4px #92a4a4 dashed;background-image: url(./img/2nd/navi_bg.png);">
 	<div class="container-fluid fullHeight">
 		<!-- Modal -->
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top: 6%;">
@@ -68,8 +67,8 @@ function showVideo(){
 				<button type="button" class="close" style="margin: 15px;" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 				<img src="./img/2nd/navi_logo.png" height="50px">
 			  </div>
-			  <div class="modal-body" style="text-align:center;padding:0px;">
-				<iframe height=400 width=100% src="http://player.youku.com/embed/XNzM5MTkwOTE2" frameborder=0 allowfullscreen></iframe>
+			  <div class="modal-body" style="text-align:center;padding:0px;height:400px;">
+				<iframe height=100% width=100% src="http://player.youku.com/embed/XNzM5MTkwOTE2" frameborder=0 allowfullscreen></iframe>
 			  </div>
 			  <div class="modal-footer hide">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -191,6 +190,7 @@ function showVideo(){
 		</div>
 		<!-- 六边形课程展示 -->
 		<div id="courseTitleRect" class="row bigRect" style="background-image: url('./img/2nd/hexagon_shadow.png');">
+				<!-- 暂时注释
 				<div class="row" id="ctr1" style="opacity:0;">
 					<div id="r11" class="col-xs-4" style="text-align: center;">
 						<button id="r11b" href="#" class="button button-pill button-flat button-tiny"></button>
@@ -217,17 +217,19 @@ function showVideo(){
 						</div>
 					</div>
 				</div>
-			    <div class="row" style="margin-bottom:-7%;">
-						<img id="imgOne"  src=" img/frontpage/sexangle1.png">
-						<img id="imgTwo" src=" img/frontpage/sexangle2.png" >
-						<img id="imgThree" src=" img/frontpage/sexangle3.png ">
+				-->
+			    <div class="row" style="margin-bottom:-4%;">
+						<img id="imgOne"  src="img/frontpage/sexangle1.png">
+						<img id="imgTwo" src="img/frontpage/sexangle2.png" >
+						<img id="imgThree" src="img/frontpage/sexangle3.png ">
 			    </div>
 			    <div class="row">
-			        <img id="imgFour" src=" img/frontpage/sexangle4after.png" style="top: 47%; left: 25.5%;opacity:0">
-						<img id="imgFive" src=" img/frontpage/sexangle5.png">
-						<img id="imgSix" src=" img/frontpage/sexangle6.png">
-						<img id="imgSeven" src=" img/frontpage/sexangle7.png">	
+						<img id="imgFour" src="img/frontpage/sexangle4.png">
+						<img id="imgFive" src="img/frontpage/sexangle5.png">
+						<img id="imgSix" src="img/frontpage/sexangle6.png">
+						<img id="imgSeven" src="img/frontpage/sexangle7.png">	
 			    </div>
+				<!-- 暂时注释
 				<div class="row"  id="ctr2" style="opacity:0;">
 					<div id="r21" class="col-xs-3" style="text-align: center;">
 						<div style="height: 1px;position: absolute;top: 0;left: 0;width: 100%;">
@@ -270,6 +272,7 @@ function showVideo(){
 						<button id="r24b" href="#" class="button button-pill button-flat button-tiny"></button>
 					</div>
 				</div>
+				-->
     		</div>
 		<!-- 我们的优势 -->
 		<div id="advRect" class="row bigRect" style="background-color:#84c0d1;">
