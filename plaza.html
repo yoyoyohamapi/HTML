@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="css/buttons.css" rel="stylesheet" type="text/css">
+<link href="css/plaza.css" rel="stylesheet" type="text/css">
+<!-- JS文件 
+<script src="jquery-1.11.1.min.js"></script>-->
+<script src="j.js" ></script>
+<script src="bootstrap/js/bootstrap.min.js" ></script>
+<script src="jquery.transit.js"></script>
+<!-- 自定义JS -->
+<script src="base.js"></script>
+<script src="plazaNavi.js"></script>
+
+<title>课程广场</title>
+</head>
+
+<body>
+<!-- Nav -->
+<nav class="navbar navbar-default nav-custom" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			 <a id="siteLogo" class="navbar-brand" href="#"><img src="img/2nd/navi_logo.png"></a>
+		</div>
+		<div class="collapse navbar-collapse" >
+			<ul class="nav navbar-nav left">
+				<li class="active"><a href="Javascript:void(0);">课程</a></li>
+				<li><a href="Javascript:void(0);">我的学习</a></li>
+			</ul>
+		<div class="collapse navbar-collapse" >
+			<ul class="nav navbar-nav navbar-right">
+				<li class="searchConLi"><input id="searchCon" type="text" placeholder="搜索你感兴趣的内容"></li>
+				<li class="searchLi"><a class="search"href="Javascript:void(0);"><i class="fa fa-search"></i></a></li>
+				<li class="headPicLi"><a href="Javascript:void(0);" class="headPic"><img  src="img/头像.png"></a></li>
+				<li>
+					<ul id="settingsMenu" class="nav navbar-nav navbar-right settings">
+						<li><a href="Javascript:void(0);" class="">学习</a></li>
+						<li><a href="Javascript:void(0);" class="">我的主页</a></li>
+						<li><a href="Javascript:void(0);" class="">消息</a></li>
+						<li><a href="Javascript:void(0);" class="">设置</a></li>
+						<li><a href="Javascript:void(0);" class="">退出</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		</div>
+	</div>
+</nav>
+
+<!-- Content -->
+<div class="container-fluid">
+	
+	<div class="row" style="margin-top:40px;">
+		<div id="mp" class="col-xs-2" style="min-width:180px;">
+			<div class="row plazaPanel">
+				<ul class="list-unstyled" style="margin:0px;">
+					<li id="n1" class="naviBox"><img src="./img/plaza/navi_course.png"><strong class="naviHead">课程分类</strong></li>
+					<li id="n2" class="naviBox"><img src="./img/plaza/navi_practice.png"><strong class="naviHead">就业实训</strong></li>
+					<li id="n3" class="naviBox"><img src="./img/plaza/navi_training.png"><strong class="naviHead">认证培训</strong></li>
+					<li id="n4" class="naviBox"><img src="./img/plaza/navi_specialty.png"><strong class="naviHead">高校专业</strong></li>
+					<li id="n5" class="naviBox"><img src="./img/plaza/navi_master.png"><strong class="naviHead">软工硕士</strong></li>
+					<li id="n6" class="naviBox"><img src="./img/plaza/navi_shortcut.png"><strong class="naviHead" style="color:#b01e00;">常用捷径</strong></li>
+					<li id="n7" class="naviBox naviBox-bg" style="background-color:#b01e00;"><img src="./img/plaza/navi_shortcut.png"><strong class="naviHead" style="color:#b01e00;">常用捷径</strong></li>
+				</ul>
+			</div>
+			<div class="naviMenuIconPanel"  style="display:none;">
+				<ul class="list-unstyled" style="margin:0px;">
+					<li id="m1" class="naviBox"><img src="./img/plaza/navi_course.png"></li>
+					<li id="m2" class="naviBox"><img src="./img/plaza/navi_practice.png"></li>
+					<li id="m3" class="naviBox"><img src="./img/plaza/navi_training.png"></li>
+					<li id="m4" class="naviBox"><img src="./img/plaza/navi_specialty.png"></li>
+					<li id="m5" class="naviBox"><img src="./img/plaza/navi_master.png"></li>
+					<li id="m6" class="naviBox"><img src="./img/plaza/navi_shortcut.png"></li>
+				</ul>
+			</div>
+			<div class="naviMenuContentPanel" style="display:none;">
+				<div id="p1" style="display:none;">
+					<ul class="list-unstyled" style="margin:0px;">
+						<li class="naviBox"><strong class="naviTitle">课程分类</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">全部</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">Java</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">Linux</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">PHP</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">Oracle</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">Web前端开发</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">JQuery</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">Android</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">IOS</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">Hadoop</strong></li>
+					</ul>
+				</div>
+				<div id="p2" style="display:none;">
+					<ul class="list-unstyled" style="margin:0px;">
+						<li class="naviBox"><strong class="naviTitle">就业实训</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">全部</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent naviContent-sm">JavaEE 企业级应用开发师</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent naviContent-sm">移动互联Android开发工程师</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent naviContent-sm">移动互联ios开发工程师</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent naviContent-sm">电商LAMP框架应用开发工程师</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent naviContent-sm">大数据Hadoop应用开发工程师</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent naviContent-sm">Linux/Unix C/C++开发工程师</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent naviContent-sm">Oracle 数据库管理工程师</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent naviContent-sm">云计算环境管理工程师</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent naviContent-sm">IT运维管理系统工程师</strong></li>
+					</ul>
+				</div>
+				<div id="p3" style="display:none;">
+					<ul class="list-unstyled" style="margin:0px;">
+						<li class="naviBox"><strong class="naviTitle">Oracle认证培训</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">全部</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">Oracle OCP认证培训</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">Oracle OCE认证培训</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">Oracle OCIS认证培训</strong></li>
+					</ul>
+				</div>
+				<div id="p4" style="display:none;">
+					<ul class="list-unstyled" style="margin:0px;">
+						<li class="naviBox"><strong class="naviTitle">高校专业</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">全部</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">JavaEE应用开发</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">LAMP框架应用开发</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">Android开发</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">iOS开发</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">Hadoop应用开发</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">云计算管理</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">Oracle EBS财务管理</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">Oracle EBS供应链管理</strong></li>
+					</ul>
+				</div>
+				<div id="p5" style="display:none;">
+					<ul class="list-unstyled" style="margin:0px;">
+						<li class="naviBox"><strong class="naviTitle">软工硕士</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent">全部</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent naviContent-sm">Oracle OCM数据库管理大师</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent naviContent-sm">Oracle ERP企业资源规划大师</strong></li>
+						<li class="naviBox naviBox-sm"><strong class="naviContent naviContent-sm">Oracle Primavera P6企业项目管理</strong></li>
+					</ul>
+				</div>
+				<div id="p6" style="display:none;">
+					<ul class="list-unstyled" style="margin:0px;">
+						<li class="naviBox"><strong class="naviTitle" style="color:#b01e00;">常用捷径</strong></li>
+						<li class="naviBox naviBox-bg"><img id="sc1" src="./img/plaza/sc1.png"></li>
+						<li class="naviBox naviBox-bg"><img id="sc2" src="./img/plaza/sc2.png"></li>
+						<li class="naviBox naviBox-bg"><img id="sc3" src="./img/plaza/sc3.png"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-9" style="height:8000px;">
+			<div class="row plazaPanel plazaPanel-center">
+				<div class="col-xs-12">
+					<p style="color: #b01e00;font-size: 30px;margin: 15px;">课程分类&gt;全部</p>
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="courseBox">
+								<p><img src="./img/plaza/ex1.png"></p>
+								<p class="title">Java面向对象程序设计</p>
+								<div class="row" style="margin:0;">
+									<div class="col-xs-6" style="text-align:left;"><p class="content">2014-8-10</p></div>
+									<div class="col-xs-6" style="text-align:right;"><p class="content"><span class="glyphicon glyphicon-user"></span> 78261</p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="courseBox">
+								<p><img src="./img/plaza/ex2.png"></p>
+								<p class="title">IOS程序打包与发布</p>
+								<div class="row" style="margin:0;">
+									<div class="col-xs-6" style="text-align:left;"><p class="content">2014-8-09</p></div>
+									<div class="col-xs-6" style="text-align:right;"><p class="content"><span class="glyphicon glyphicon-user"></span> 31368</p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="courseBox">
+								<p><img src="./img/plaza/ex3.png"></p>
+								<p class="title">Swift Weather App开发</p>
+								<div class="row" style="margin:0;">
+									<div class="col-xs-6" style="text-align:left;"><p class="content">2014-8-04</p></div>
+									<div class="col-xs-6" style="text-align:right;"><p class="content"><span class="glyphicon glyphicon-user"></span> 25143</p></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="courseBox">
+								<p><img src="./img/plaza/ex4.png"></p>
+								<p class="title">大数据概论</p>
+								<div class="row" style="margin:0;">
+									<div class="col-xs-6" style="text-align:left;"><p class="content">2014-8-02</p></div>
+									<div class="col-xs-6" style="text-align:right;"><p class="content"><span class="glyphicon glyphicon-user"></span> 27168</p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="courseBox">
+								<p><img src="./img/plaza/ex5.png"></p>
+								<p class="title">云计算的创新之路</p>
+								<div class="row" style="margin:0;">
+									<div class="col-xs-6" style="text-align:left;"><p class="content">2014-8-01</p></div>
+									<div class="col-xs-6" style="text-align:right;"><p class="content"><span class="glyphicon glyphicon-user"></span> 35421</p></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="courseBox">
+								<p><img src="./img/plaza/ex6.png"></p>
+								<p class="title">Linux开发</p>
+								<div class="row" style="margin:0;">
+									<div class="col-xs-6" style="text-align:left;"><p class="content">2014-7-29</p></div>
+									<div class="col-xs-6" style="text-align:right;"><p class="content"><span class="glyphicon glyphicon-user"></span> 16728</p></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12" style="text-align:center;">
+							<p style="font-size:17px;color:#cbcbcb;margin:60px 0px 60px 0px;">下拉加载更多···</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-1">
+			<div class="row plazaPanel">
+				1
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
